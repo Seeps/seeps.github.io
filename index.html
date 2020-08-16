@@ -17,8 +17,8 @@
   </head>
     
     <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand navbar-brand-img visible-sm visible-xs" href="/"><img src="https://lh3.googleusercontent.com/-9gs5fqgefUo/AAAAAAAAAAI/AAAAAAAAHv4/vTyiw7gdxjk/s60-p-rw-no-il/photo.jpg" style="height: 50px;" class="img-thumbnail img-fluid"></a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand navbar-brand-img visible-sm visible-xs" href="/"><img src="logo_transparent.png" style="height: 50px;" class="img-fluid"></a>
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -42,15 +42,18 @@
   </div>
 </nav>
 
-<div class="jumbotron text-center" style="background-image: url(https://images.pexels.com/photos/117729/pexels-photo-117729.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size:cover;">
-<button type="button" class="btn btn-danger btn-lg" style="margin: 5% 0 5% -15%; font-size: 40px; text-transform: none; visibility: hidden;">Seep's Blog
+<header>
+  <div class="overlay" style="background-image: url(https://images.pexels.com/photos/117729/pexels-photo-117729.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size:cover;">
+<button type="button" class="btn btn-danger btn-lg" style="margin: 5% 0 10% -15%; font-size: 40px; text-transform: none; visibility: hidden;">Seep's Blog
       <p class="lead" style="font-size:15px; margin-top: 5%;">Welcome to my blog - I hope you enjoy your stay</p>
-    </button>
-</div>
+      </button></div>
+</header>
+        
+
         
 <div class="jumbotron text-center" style="margin: 5% 5% 0 5%;">
-  <h1 class="display-5" style="font-size: 25px;">Welcome to my blog - I hope you enjoy your stay</h1>
-  <p class="lead">There is nothing here...yet!</p>
+  <h1 class="display-5" style="font-size: 25px;">Identifying Chromium Incognito Mode</h1>
+  <p class="lead">Activity that lives only in memory is always difficult to determine for digital forensicators. Unless you get lucky with a suspect hibernating their machine at the timeslice of interest, or well-timed memory dumps, traditional on-disk artifacts won't be of much use.</p>
   <p class="lead">
     <a class="btn btn-outline-primary btn-default" href="#" role="button">Read More</a>
   </p>
@@ -76,3 +79,92 @@
         
   </body>
 </html>
+
+
+<style>
+    
+body {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+    
+
+/* Animation */
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+    
+.jumbotron {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: both
+}
+
+.jumbotron {
+    opacity: 0
+}
+
+.jumbotron {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+    
+    footer p { 
+    margin:0 }
+    
+</style>
