@@ -216,11 +216,11 @@
 
     </tr>
     <tr>
-      <th scope="row">cmd /c dir C:\Users\SANSDFIR\Documents</th>
+      <th scope="row" style="word-break: break-all;">cmd /c dir C:\Users\SANSDFIR\Documents</th>
       <td>Display the volume label/serial number and a list of files and subfolders in 'Documents' folder.*</td>
     </tr>
           <tr>
-     <th scope="row">cmd /c dir C:\Users\SANSDFIR\Downloads</th>
+     <th scope="row" style="word-break: break-all;">cmd /c dir C:\Users\SANSDFIR\Downloads</th>
       <td>Display the volume label/serial number and a list of files and subfolders in 'Downloads' folder.*</td>
     </tr>
   </tbody>
@@ -554,5 +554,41 @@ body {
   content: "";
   clear: both;
   display: table;
+}
+    
+@media 
+only screen and (max-width: 440px),
+{
+
+/* Force table to not be like tables anymore */
+table, thead, tbody, th, td, tr { 
+    display: block; 
+}
+
+/* Hide table headers (but not display: none;, for accessibility) */
+thead tr { 
+    position: relative;
+
+}
+
+tr { border: 1px solid #ccc; }
+
+td { 
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee; 
+    position: relative;
+    padding-left: 50%; 
+}
+
+td:before { 
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
 }
 </style>
