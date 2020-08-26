@@ -64,9 +64,8 @@
 
     <h1 class="display-5" style="font-size: 20px;padding-top: 2%;">Findings – Host</h1>
 <p style="text-align:left;">Let’s first take a look at the metadata of the ‘level3.exe’ payload that we are investigating using ‘exiftool’, the ‘file’ command, and generating hash values:
-<p style="text-align:center;">
     
-   <table class="table" style="height: 50%; width: 50%;">
+   <table class="table" style="height: 50%; width: 65%;">
   <tbody>
     <tr>
       <th scope="row">Name:</th>
@@ -84,16 +83,16 @@
     </tr>
     <tr>
       <th scope="row">MD5:</th>
-      <td>700b64dd134eba64309b5628775cf7af</td>
+      <td style="word-break: break-all;">700b64dd134eba64309b5628775cf7af</td>
     </tr>
 	    <tr>
       <th scope="row">SHA-1:</th>
-      <td>7c43c28314bc6dad24664a38ba32997d4114b0db</td>
+      <td style="word-break: break-all;">7c43c28314bc6dad24664a38ba32997d4114b0db</td>
 
     </tr>
     <tr>
       <th scope="row">SHA-256:</th>
-      <td>fd4f25567498032e3f4dd75a211c4729a895abadb5609345b52c469f4d99dc31</td>
+      <td style="word-break: break-all;">fd4f25567498032e3f4dd75a211c4729a895abadb5609345b52c469f4d99dc31</td>
 
     </tr>
     <tr>
@@ -114,7 +113,7 @@
 <p style="text-align:left;">
 22 events are returned that show copious usage of the Windows Command Prompt (cmd.exe) to query various system and user properties. Note the ‘/c’ switch carries out the command specified by string and then terminates:
     
-    <table class="table" style="height: 50%; width: 50%;">
+    <table class="table" style="height: 50%; width: 65%;">
   <thead class="thead-dark">
     <tr>
       <th scope="col">Command Line
@@ -261,7 +260,7 @@ Changing the Operation filter to contain ‘TCP’ and the Command Line to conta
     <a href="https://raw.githubusercontent.com/Seeps/seeps.github.io/master/images/uc/edr3.png"><p><img style="height: 75%; width: 75%;" src="https://raw.githubusercontent.com/Seeps/seeps.github.io/master/images/uc/edr2.png" class="img-fluid"></a>
 
     <p style="text-align:left;">Windows Prefetch files are extremely valuable here and can be parsed using <a href="https://github.com/EricZimmerman/PECmd">PECMD</a> to determine last run times and counts. We see grouped runs of the Windows binaries relative to the 'level3.exe' payload - perfect for checking any additional binaries that may have been dropped and executed:
-<table class="table" style="height: 50%; width: 50%;">
+<table class="table" style="height: 50%; width: 65%;">
   <thead class="thead-dark">
     <tr>
       <th scope="col">Executable Name
@@ -327,7 +326,7 @@ Changing the Operation filter to contain ‘TCP’ and the Command Line to conta
     
     <p style="text-align:left;">Lastly for usage, the System Resource Usage Monitor database can be parsed using <a href="https://github.com/MarkBaggett/srum-dump">SRUM-DUMP</a> to give us application usage statistics. Network data such as bytes sent/received are recorded which we can use to determine payload data exfiltration and lateral movement:
 
-<table class="table" style="height: 50%; width: 50%;">
+<table class="table" style="height: 50%; width: 65%;">
   <thead class="thead-dark">
     <tr>
       <th scope="col">Application
@@ -338,7 +337,7 @@ Changing the Operation filter to contain ‘TCP’ and the Command Line to conta
   </thead>
   <tbody>
     <tr>
-      <th scope="row">\device\harddiskvolume1\users\sansdfir\desktop\level3\level3.exe</th>
+      <th scope="row" style="word-break: break-all;">\device\harddiskvolume1\users\sansdfir\desktop\level3\level3.exe</th>
       <td>285090</td>
         <td>192926</td>
     </tr>
@@ -358,7 +357,7 @@ From the endpoint analysis, the C2 domain and IP address were identified thanks 
     
 <p style="text-align:left;">Analysis of the traffic content is difficult due to encryption, but we can still obtain data. Using Wireshark, the C2 TLS certificate can be carved by exporting HTTP objects and viewed using ‘certutil’ or ‘openssl’. We see the issue as Let’s Encrypt and the subject (scythedemo) matching the C2 FQDN:
     
-       <table class="table" style="height: 50%; width: 50%;">
+       <table class="table" style="height: 50%; width: 65%;">
   <tbody>
     <tr>
       <th scope="row">Name:</th>
@@ -371,16 +370,16 @@ From the endpoint analysis, the C2 domain and IP address were identified thanks 
     </tr>
     <tr>
       <th scope="row">MD5:</th>
-      <td>c7222a647706d3a52c1ae28a28f40fa0</td>
+      <td style="word-break: break-all;">c7222a647706d3a52c1ae28a28f40fa0</td>
     </tr>
 	    <tr>
       <th scope="row">SHA-1:</th>
-      <td>6c64e8185418d0e6416dbaf36b5a01ded23ac968</td>
+      <td style="word-break: break-all;">6c64e8185418d0e6416dbaf36b5a01ded23ac968</td>
 
     </tr>
     <tr>
       <th scope="row">SHA-256:</th>
-      <td>8737e4ae09ad4cd9e2ac19f9d0420569d3390600a9e3c2d5a9aa21c97f9945fa</td>
+      <td style="word-break: break-all;">8737e4ae09ad4cd9e2ac19f9d0420569d3390600a9e3c2d5a9aa21c97f9945fa</td>
     </tr>
   </tbody>
 </table>
@@ -393,11 +392,11 @@ From the endpoint analysis, the C2 domain and IP address were identified thanks 
     
         <a href="https://raw.githubusercontent.com/Seeps/seeps.github.io/master/images/uc/ja3.PNG"><p><img style="height: 75%; width: 75%;" src="https://raw.githubusercontent.com/Seeps/seeps.github.io/master/images/uc/ja3.PNG" class="img-fluid"></a>
     
-          <table class="table" style="height: 50%; width: 50%;">
+          <table class="table" style="height: 50%; width: 65%;">
   <tbody>
     <tr>
       <th scope="row">JA3 Digest:</th>
-      <td>a0e9f5d64349fb13191bc781f81f42e1</td>
+      <td style="word-break: break-all;">a0e9f5d64349fb13191bc781f81f42e1</td>
     </tr>
           <tr>
       <th scope="row">JA3 Fingerprint:</th>
