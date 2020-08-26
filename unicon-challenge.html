@@ -457,9 +457,9 @@ From the endpoint analysis, the C2 domain and IP address were identified thanks 
     
 body {
     animation: fadein 2s;
-    -moz-animation: fadein 2s; /* Firefox */
-    -webkit-animation: fadein 2s; /* Safari and Chrome */
-    -o-animation: fadein 2s; /* Opera */
+    -moz-animation: fadein 2s; 
+    -webkit-animation: fadein 2s; 
+    -o-animation: fadein 2s; 
 }
 @keyframes fadein {
     from {
@@ -469,7 +469,7 @@ body {
         opacity:1;
     }
 }
-@-moz-keyframes fadein { /* Firefox */
+@-moz-keyframes fadein { 
     from {
         opacity:0;
     }
@@ -477,7 +477,7 @@ body {
         opacity:1;
     }
 }
-@-webkit-keyframes fadein { /* Safari and Chrome */
+@-webkit-keyframes fadein { 
     from {
         opacity:0;
     }
@@ -485,7 +485,7 @@ body {
         opacity:1;
     }
 }
-@-o-keyframes fadein { /* Opera */
+@-o-keyframes fadein { 
     from {
         opacity:0;
     }
@@ -494,8 +494,6 @@ body {
     }
 }
     
-
-/* Animation */
 
 @keyframes fadeInUp {
     from {
@@ -560,12 +558,10 @@ body {
 only screen and (max-width: 440px),
 {
 
-/* Force table to not be like tables anymore */
 table, thead, tbody, th, td, tr { 
     display: block; 
 }
 
-/* Hide table headers (but not display: none;, for accessibility) */
 thead tr { 
     position: relative;
 
@@ -574,7 +570,6 @@ thead tr {
 tr { border: 1px solid #ccc; }
 
 td { 
-    /* Behave  like a "row" */
     border: none;
     border-bottom: 1px solid #eee; 
     position: relative;
@@ -582,9 +577,7 @@ td {
 }
 
 td:before { 
-    /* Now like a table header */
     position: absolute;
-    /* Top/left values mimic padding */
     top: 6px;
     left: 6px;
     width: 45%; 
